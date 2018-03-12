@@ -1,4 +1,20 @@
-#Couchbase Server 5.0.1 Community Edition on Ubuntu 16.4
+# Couchbase Server 5.0.1 Community Edition on Ubuntu 14.04
+pre configured
+
+## StarUp
+in http://localhost:8091 `username=adminuser -d password=pa55w0rd`
+
+
+
+
+#### allow connections to the following ports:
+ 11211, 11210, 11209, 4369, 8091, 8092, 18091, 18092, 11214, 11215 and from 21100 to 21299.
+ 
+## more info
+ - [install in ubuntu](https://developer.couchbase.com/documentation/server/5.0/install/ubuntu-debian-install.html)
+- http://www.madhur.co.in/blog/2016/07/07/create-couchbase-bucket-docker.html
+- https://thecuriousdev.org/nosql-couchbase-setting-everything-docker/
+- https://hub.docker.com/r/couchbase/server/tags/
 
 allow connections to the following ports: 11211, 11210, 11209, 4369,
 8091, 8092, 18091, 18092, 11214, 11215 and from 21100 to 21299.
