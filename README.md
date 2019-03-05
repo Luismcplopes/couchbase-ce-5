@@ -2,13 +2,14 @@
 
 ## My QuickStart with Couchbase Server and DockerStarUp
 allow connections to the following ports: 11211, 11210, 11209, 4369, 8091, 8092, 18091, 18092, 11214, 11215 and from 21100 to 21299.
+
 **Step - 1 :** Run Couchbase Server docker container
 ```bash
 $ docker run -it -d -p 8091-8093:8091-8093 -p 11210:11210 -v /opt/couchbase/var/lib/couchbase/data:/opt/couchbase/var/lib/couchbase/data couchbase/server:community-5.0.0
 ```
 **Step - 2 :** Next, visit `http://localhost:8091` with `username=adminuser -d password=pa55w0rd` on the host machine to see the Web Console to start Couchbase Server setup.
 
-Nota:  
+**Nota:  
 ```bash
 $ docker container exec <containerid>   /bin/bash  /opt/couchbase/entrypoint.sh
 ```
