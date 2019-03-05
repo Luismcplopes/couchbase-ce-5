@@ -1,4 +1,4 @@
-FROM couchbase/server:community-5.0.1
+FROM luismcplopes/couchbasece-5
 COPY configure-node.sh /opt/couchbase
 RUN chmod a+x /opt/couchbase/configure-node.sh
 ENTRYPOINT ["/bin/bash"]
