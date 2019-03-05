@@ -1,4 +1,5 @@
 FROM luismcplopes/couchbasece-5
+MAINTAINER Luis Lopes <luis.mcp.lopes@gmail.com>
 COPY configure-node.sh /opt/couchbase
 RUN chmod a+x /opt/couchbase/configure-node.sh
 ENTRYPOINT ["/bin/bash"]
