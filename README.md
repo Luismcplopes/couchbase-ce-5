@@ -1,36 +1,17 @@
-# Couchbase Server 5.0.1 Community Edition on Ubuntu 14.04
-pre configured
+# Pre configured Couchbase Server 5.0.1 Community Edition on Ubuntu 14.04
 
-## StarUp
-in http://localhost:8091 `username=adminuser -d password=pa55w0rd`
-
-
-
-
-#### allow connections to the following ports:
- 11211, 11210, 11209, 4369, 8091, 8092, 18091, 18092, 11214, 11215 and from 21100 to 21299.
- 
-## more info
- - [install in ubuntu](https://developer.couchbase.com/documentation/server/5.0/install/ubuntu-debian-install.html)
-- http://www.madhur.co.in/blog/2016/07/07/create-couchbase-bucket-docker.html
-- https://thecuriousdev.org/nosql-couchbase-setting-everything-docker/
-- https://hub.docker.com/r/couchbase/server/tags/
-
-allow connections to the following ports: 11211, 11210, 11209, 4369,
-8091, 8092, 18091, 18092, 11214, 11215 and from 21100 to 21299.
-
-
-`$ docker run -d -p 8091-8093:8091-8093 -p 11210:11210 -v /opt/couchbase/var/lib/couchbase/data:/opt/couchbase/var/lib/couchbase/data couchbase/server:community-5.0.0`
-
-### Iniciar Ubuntu 16.04
+## My QuickStart with Couchbase Server and DockerStarUp
+allow connections to the following ports: 11211, 11210, 11209, 4369, 8091, 8092, 18091, 18092, 11214, 11215 and from 21100 to 21299.
+**Step - 1 :** Run Couchbase Server docker container
+```bash
+$ docker run -it -d -p 8091-8093:8091-8093 -p 11210:11210 -v /opt/couchbase/var/lib/couchbase/data:/opt/couchbase/var/lib/couchbase/data couchbase/server:community-5.0.0
 ```
-$ docker run -d -p 8091-8093:8091-8093 -p 11210:11210 -v /opt/couchbase/var/lib/couchbase/data:/opt/couchbase/var/lib/couchbase/data 
+**Step - 2 :** Next, visit `http://localhost:8091` with `username=adminuser -d password=pa55w0rd` on the host machine to see the Web Console to start Couchbase Server setup.
+
+Nota:  
+```bash
 $ docker container exec <containerid>   /bin/bash  /opt/couchbase/entrypoint.sh
 ```
-
-
-
-
 
 
 This README will guide you through running Couchbase Server with Docker Containers.
@@ -187,3 +168,9 @@ By default, the `latest` Docker tag points to the latest Enterprise Edition. If 
 ```console
 docker run couchbase:community-4.0.0
 ```
+
+## more info
+ - [install in ubuntu](https://developer.couchbase.com/documentation/server/5.0/install/ubuntu-debian-install.html)
+- http://www.madhur.co.in/blog/2016/07/07/create-couchbase-bucket-docker.html
+- https://thecuriousdev.org/nosql-couchbase-setting-everything-docker/
+- https://hub.docker.com/r/couchbase/server/tags/
